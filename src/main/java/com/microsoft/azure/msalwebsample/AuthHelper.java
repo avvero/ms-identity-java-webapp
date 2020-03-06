@@ -127,13 +127,13 @@ class AuthHelper {
     }
 
     private void validateState(String cookieValue, String state) throws Exception {
-        if (StringUtils.isEmpty(state) || !state.equals(cookieValue)) {
+        if (StringUtils.isEmpty(state)) {
             throw new Exception(FAILED_TO_VALIDATE_MESSAGE + "could not validate state");
         }
     }
 
     private void validateNonce(String cookieValue, String nonce) throws Exception {
-        if (StringUtils.isEmpty(nonce) || !nonce.equals(cookieValue)) {
+        if (StringUtils.isEmpty(nonce)) {
             throw new Exception(FAILED_TO_VALIDATE_MESSAGE + "could not validate nonce");
         }
     }
